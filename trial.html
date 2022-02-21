@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include JS Library -->
+    <script src="https://js.klevu.com/core/v2/klevu.js"></script>
+
+    <!-- Include Quick Search Theme -->
+    <script src="https://js.klevu.com/theme/default/v2/quick-search.js"></script>
+    <!-- <script src="https://js.klevu.com/theme/default/v2/category-page.js"></script> -->
+    <!-- <script src="https://js.klevu.com/theme/default/v2/search-results-page.js"></script> -->
+
+    <!-- Configure Klevu for your store -->
+    <script type="text/javascript">
+        klevu.interactive(function () {
+            var options = {
+                url : {
+                    landing : '/search-results',
+                    protocol: 'https:',
+                    search: 'https://eucs3v2.ksearchnet.com/cs/v2/search' // your search URL
+                },
+                search: {
+                    minChars: 0,
+                    searchBoxSelector: "#my-search", // your search input selector
+                    apiKey: "klevu-14728819608184175" // your Klevu JS API Key
+                },
+                analytics: {
+                    apiKey: 'klevu-14728819608184175' // your Klevu JS API Key
+                }
+            };
+            klevu(options);
+        });
+    </script>
+</head>
+<body>
+<!-- The ID of the input matches 'searchBoxSelector' above -->
+<form action="#">
+    <input id="my-search" name="q" type="text">
+</form>
+</body>
+</html>
